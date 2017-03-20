@@ -4,8 +4,14 @@
       <div class="video-bubble hero halfway-section">
         <div class="compartment">
           <div class="video__details">
-            <h1 class="larger">Capture a Stronger Supply Chain.</h1>
-            <p>From basic barcode labels to enterprise-wide solutions, our team takes the time to learn about your unique business needs. Then we develop, deploy and manage cost-effective solutions that let you sleep better at night and <strong>make your customers smile.</strong></p><a href="" class="button button--inverse full-width">Ask a Question</a><a href="" class="button button--inverse full-width">Request a Quote</a><a href="" class="button button--inverse full-width">Shop Now</a>
+            <!-- First section loaded -->
+            <?php $my_query = new WP_Query('pagename=Home&posts_per_page=1'); ?>
+
+            <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
+            <?php the_content(); ?>
+
+            <?php endwhile; ?>
           </div>
         </div><img src="<?php echo get_template_directory_uri(); ?>/assets/images/hero.jpg" alt="undefined">
       </div>
@@ -48,16 +54,14 @@
         </ul>
         <div class="bubble bubble--big bubble--white">
           <div class="compartment">
-            <div class="blockquote-bubble clear">
-                <figure class="shifted-asset shifted-asset--left"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/big-circle.jpg" alt="">
-                  <figcaption></figcaption>
-                </figure>
-              <div class="block-out">
-                <blockquote>“Whether it’s modifying existing software or buying new hardware, the <strong>team at Barcoding, Inc. has my best interest at heart</strong>. They’ve learned my business and they’re willing to help me however they can.”
-                  <cite>DONNA BECRAFT, CIO, Dunbar Armored</cite>
-                </blockquote>
-              </div>
-            </div>
+            <!-- Third section loaded -->
+            <?php $my_query = new WP_Query('pagename=Home2&posts_per_page=1'); ?>
+
+            <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+
+            <?php the_content(); ?>
+
+            <?php endwhile; ?>
           </div>
         </div>
       </div>
